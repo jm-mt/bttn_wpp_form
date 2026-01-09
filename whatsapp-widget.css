@@ -767,6 +767,9 @@
 .wwl-bubble-buttons {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    background: #F8F9FA;
     border-top: 1px solid #E5E5E5;
 }
 
@@ -774,17 +777,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 16px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #E5E5E5;
-    color: #128C7E;
-    font-size: 14px;
-    font-weight: 500;
+    gap: 10px;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    border: 2px solid #25D366;
+    border-radius: 12px;
+    color: #25D366;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
 }
 
 .wwl-bubble-btn:last-child {
@@ -792,27 +796,54 @@
 }
 
 .wwl-bubble-btn:hover {
-    background: #F0FDF4;
-    color: #075E54;
+    background: #25D366;
+    color: #FFFFFF;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.wwl-bubble-btn:hover svg {
+    fill: #FFFFFF;
 }
 
 .wwl-bubble-btn:active {
-    background: #DCFCE7;
+    transform: scale(0.98);
 }
 
 .wwl-bubble-btn svg {
     flex-shrink: 0;
+    width: 22px;
+    height: 22px;
 }
 
 .wwl-bubble-btn-primary {
-    background: #F0FDF4;
-    color: #25D366;
-    font-weight: 600;
+    background: #25D366;
+    color: #FFFFFF;
+    font-weight: 700;
+    animation: wwl-btn-pulse 2s infinite;
+}
+
+.wwl-bubble-btn-primary svg {
+    fill: #FFFFFF;
 }
 
 .wwl-bubble-btn-primary:hover {
-    background: #DCFCE7;
-    color: #128C7E;
+    background: #128C7E;
+    border-color: #128C7E;
+    color: #FFFFFF;
+}
+
+@keyframes wwl-btn-pulse {
+    0%, 100% { box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3); }
+    50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+}
+
+@keyframes wwl-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
 }
 
 .wwl-bubble-btn.wwl-clicked {
