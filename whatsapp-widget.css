@@ -818,6 +818,10 @@
 .wwl-bubble-btn.wwl-clicked {
     background: #25D366;
     color: #FFFFFF;
+}
+
+.wwl-bubble-btn.wwl-cooldown {
+    opacity: 0.7;
     pointer-events: none;
 }
 
