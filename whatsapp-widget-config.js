@@ -25,7 +25,7 @@ const WHATSAPP_WIDGET_CONFIG = {
     // NÚMERO DO WHATSAPP (para redirecionamento)
     // ==========================================
     whatsapp: {
-        number: "5511999999999",                    // Número com código do país (sem + ou espaços)
+        number: "5511991078220",                    // Número com código do país (sem + ou espaços)
 
         // Mensagem enviada ao WhatsApp (com dados do lead)
         // Variáveis: {userName}, {userEmail}, {userPhone}
@@ -55,7 +55,7 @@ const WHATSAPP_WIDGET_CONFIG = {
         },
         messageDelay: 300,                         // Delay entre mensagens consecutivas
         readReceiptDelay: 400,                     // Delay para mostrar "visto"
-        redirectDelay: 1200                        // Delay antes de redirecionar pro WhatsApp
+        redirectDelay: 1500                        // Delay antes de redirecionar pro WhatsApp
     },
 
     // ==========================================

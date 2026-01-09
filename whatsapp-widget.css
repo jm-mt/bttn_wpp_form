@@ -750,6 +750,117 @@
 }
 
 /* ==========================================
+   MENSAGEM COM BOTOES (Estilo WhatsApp Business API)
+   ========================================== */
+
+.wwl-bubble-interactive {
+    padding: 0;
+    overflow: hidden;
+}
+
+.wwl-bubble-interactive .wwl-bubble-text {
+    padding: 10px 12px 8px;
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+.wwl-bubble-buttons {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #E5E5E5;
+}
+
+.wwl-bubble-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    color: #128C7E;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.wwl-bubble-btn:last-child {
+    border-bottom: none;
+}
+
+.wwl-bubble-btn:hover {
+    background: #F0FDF4;
+    color: #075E54;
+}
+
+.wwl-bubble-btn:active {
+    background: #DCFCE7;
+}
+
+.wwl-bubble-btn svg {
+    flex-shrink: 0;
+}
+
+.wwl-bubble-btn-primary {
+    background: #F0FDF4;
+    color: #25D366;
+    font-weight: 600;
+}
+
+.wwl-bubble-btn-primary:hover {
+    background: #DCFCE7;
+    color: #128C7E;
+}
+
+.wwl-bubble-btn.wwl-clicked {
+    background: #25D366;
+    color: #FFFFFF;
+    pointer-events: none;
+}
+
+.wwl-bubble-btn.wwl-clicked svg {
+    fill: #FFFFFF;
+}
+
+.wwl-bubble-interactive .wwl-bubble-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px 8px;
+    background: #FAFAFA;
+    border-top: 1px solid #E5E5E5;
+}
+
+.wwl-bubble-countdown {
+    font-size: 11px;
+    color: #667781;
+}
+
+.wwl-bubble-countdown strong {
+    color: #25D366;
+    font-weight: 600;
+}
+
+/* Animacao de entrada da mensagem de escolha */
+.wwl-choice-message {
+    animation: wwl-choice-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes wwl-choice-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================
    INDICADOR DIGITANDO
    ========================================== */
 
