@@ -1281,7 +1281,8 @@
                 });
             });
 
-            // Auto-redirect apos X segundos (pode ser bloqueado, mas teremos fallback)
+            // Auto-redirect apos X segundos
+            // Usa confirm() para pedir permissao - isso evita bloqueio de popup
             autoRedirectTimer = setInterval(() => {
                 countdown--;
                 if (countdownEl) countdownEl.textContent = countdown + 's';
@@ -1291,14 +1292,29 @@
 
                     // Atualiza visual
                     if (countdownContainer) {
-                        countdownContainer.innerHTML = '<span style="color: #25D366;">Abrindo...</span>';
+                        countdownContainer.innerHTML = '<span style="color: #25D366;">Aguardando...</span>';
                     }
 
-                    // Tenta redirecionar automaticamente
-                    // Se popup for bloqueado, goToWhatsApp vai mostrar mensagem de fallback
-                    goToWhatsApp('app');
+                    // Pede permissao via confirm - clique do usuario evita bloqueio de popup
+                    const userConfirmed = window.confirm(
+                        'Vamos abrir o WhatsApp para continuar a conversa!\n\n' +
+                        'Clique em OK para abrir o WhatsApp.'
+                    );
 
-                    log('WhatsApp auto-redirect after ' + autoRedirectSeconds + 's');
+                    if (userConfirmed) {
+                        // Usuario clicou OK - abre WhatsApp (nao sera bloqueado)
+                        if (countdownContainer) {
+                            countdownContainer.innerHTML = '<span style="color: #25D366;">Abrindo...</span>';
+                        }
+                        goToWhatsApp('app');
+                        log('WhatsApp opened after user confirmation');
+                    } else {
+                        // Usuario clicou Cancelar - mostra mensagem com botao
+                        if (countdownContainer) {
+                            countdownContainer.innerHTML = '<span style="color: #667781;">Clique nos botoes acima quando quiser</span>';
+                        }
+                        log('User cancelled auto-redirect');
+                    }
                 }
             }, 1000);
 
