@@ -40,7 +40,11 @@ const WHATSAPP_WIDGET_CONFIG = {
         // "ask" = pergunta ao usuário (Web ou App)
         // "web" = abre direto no WhatsApp Web
         // "app" = abre direto no WhatsApp Desktop/App
-        desktopBehavior: "ask"
+        desktopBehavior: "ask",
+
+        // Tempo (em segundos) para redirecionar automaticamente
+        // caso o usuário não clique em nenhuma opção
+        autoRedirectDelay: 4
     },
 
     // ==========================================

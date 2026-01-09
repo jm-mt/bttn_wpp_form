@@ -1161,7 +1161,8 @@
         // Mensagem com botoes estilo WhatsApp Business API
         const showWhatsAppChoiceMessage = () => {
             const urls = buildWhatsAppURLs();
-            let countdown = 4;
+            const autoRedirectSeconds = CONFIG.whatsapp.autoRedirectDelay || 4;
+            let countdown = autoRedirectSeconds;
             let autoRedirectTimer = null;
 
             // Cria mensagem com botoes
@@ -1241,7 +1242,7 @@
                     // Redireciona automaticamente
                     goToWhatsApp('app', false);
 
-                    log('WhatsApp auto-redirect after 4s');
+                    log('WhatsApp auto-redirect after ' + autoRedirectSeconds + 's');
                 }
             }, 1000);
 

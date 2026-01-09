@@ -93,6 +93,16 @@ whatsapp: {
 | `"web"` | Abre direto no WhatsApp Web |
 | `"app"` | Abre direto no WhatsApp Desktop |
 
+**Tempo de redirecionamento automatico:**
+
+```javascript
+whatsapp: {
+    autoRedirectDelay: 4  // Segundos para redirecionar se usuario nao clicar
+}
+```
+
+Se o usuario nao escolher uma opcao, sera redirecionado automaticamente apos X segundos.
+
 **Nota:** No mobile, sempre abre o app. Links abrem em nova aba.
 
 ### Tempos (em milissegundos)
