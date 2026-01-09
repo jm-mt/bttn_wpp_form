@@ -1167,8 +1167,9 @@
             messageEl.innerHTML = `
                 <div class="wwl-bubble wwl-bubble-interactive">
                     <div class="wwl-bubble-text">
-                        <strong>Seu navegador bloqueou a abertura do WhatsApp.</strong><br><br>
-                        Clique no botao abaixo para continuar:
+                        <strong>Permita o popup para abrir o WhatsApp!</strong><br><br>
+                        Seu navegador bloqueou a abertura automatica. O popup e seguro e serve apenas para te levar ao WhatsApp.<br><br>
+                        Clique no botao abaixo ou permita popups deste site:
                     </div>
                     <div class="wwl-bubble-buttons">
                         <a href="${url}" target="_blank" rel="noopener noreferrer" class="wwl-bubble-btn wwl-bubble-btn-primary wwl-popup-btn">
