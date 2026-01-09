@@ -25,7 +25,7 @@ const WHATSAPP_WIDGET_CONFIG = {
     // NÚMERO DO WHATSAPP (para redirecionamento)
     // ==========================================
     whatsapp: {
-        number: "5511991078220",                    // Número com código do país (sem + ou espaços)
+        number: "5519991078220",                    // Número com código do país (sem + ou espaços)
 
         // Mensagem enviada ao WhatsApp (com dados do lead)
         // Variáveis: {userName}, {userEmail}, {userPhone}
