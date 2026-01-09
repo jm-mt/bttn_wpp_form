@@ -119,7 +119,7 @@ const WHATSAPP_WIDGET_CONFIG = {
         // Mensagens de erro de validação (humanizadas)
         validation: {
             name: "Ops, não entendi... pode me falar seu nome de novo?",
-            email: "Hmm, esse e-mail não tá certinho... confere pra mim?",
+            email: "Hmm, esse e-mail não tá certo... confere pra mim?",
             phone: "Esse número tá estranho... coloca com DDD, tipo (11) 99999-9999"
         }
     },
@@ -131,7 +131,7 @@ const WHATSAPP_WIDGET_CONFIG = {
         inputPlaceholder: "Digite uma mensagem...",
         sendButton: "Enviar",
         typing: "digitando...",
-        online: "online",
+        online: "Online agora!",
         offline: "offline"
     },
 
